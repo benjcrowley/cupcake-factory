@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Order List</title>
+</head>
+<body>
+    <header>
+        <a href="/">Home</a><br>
+        <a href="create_cupcake">Create your Own</a><br>
+        <a href="orders">Orders</a><br>
+        <a href="cupcakes">All Cupcakes</a><br>
+        <a href="individual_cupcake">Indidual Cupcake</a><br>
+    </header>
+    <h1>Add Cupcake to Order</h1>
+    <form>
+        <label for="cupcake_name">Name of Cupcake:</label><br>
+        <input type="text" id="cupcake_name" name="cupcake_name"><br>
+        <input type="submit" value="Add">
+      </form>
+    <h1>    Unfilled Orders:    </h1>
+    <h3>Order total: ${{order_total}}</h3>
+    {% for cupcake in cupcakes %}
+    <h3>Name: {{ cupcake["name"] }}</h3>
+    <h4>Size: {{ cupcake["size"] }}</h4>
+    <h4>Cake Flavor: {{ cupcake["flavor"] }}</h4>
+    <h4>Frosting Flavor: {{ cupcake["frosting"] }}</h4>
+    <h4>Sprinkles: {{ cupcake['sprinkles']}}</h4>
+    <h4>Price: {{ cupcake['price']}}</h4>
+    <a href="{{ url_for('remove_cupcake', name=cupcake['name']) }}"><button>Remove from Cart</button></a>
+    {% endfor %}
+
+    <h1>    Filled Orders:    </h1>
+</body>
+</html>

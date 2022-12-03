@@ -1,0 +1,10 @@
+size,name,price,flavor,frosting,sprinkles,filling
+mini,Small Fry,0.89,vanilla,vanilla,[],
+mini,Teeny Cake,0.89,vanilla,chocolate,[],
+mini,lil Coco,0.89,chocolate,chocolate,['brown'],
+Regular,Main Attraction,1.79,Chocolate,vanilla,[],vanilla
+Regular,Average Joe,1.49,vanilla,vanilla,[],
+Regular,Triple Chocolate,1.79,chocolate,chocolate,[],chocolate
+Large,Big Chocolate,2.99,chocolate,chocolate,[],chocolate
+Large,Cookies n Creme,2.99,chocolate,Vanilla,['oreo crumbs'],
+Large,Americas Cup,2.99,Red Velvet,Vanilla,"['red', 'white', 'blue']",
